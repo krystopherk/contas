@@ -11,21 +11,9 @@ pluginManagement {
     includeBuild("$flutterSdk/packages/flutter_tools/gradle")
 
     repositories {
-        // 1. REPOSITÓRIO DE PLUGINS (Onde estava dando erro)
-        maven {
-            url = uri("https://plugins.gradle.org/m2/")
-            isAllowInsecureProtocol = true
-        }
-        // 2. GOOGLE
-        maven {
-            url = uri("https://maven.google.com")
-            isAllowInsecureProtocol = true
-        }
-        // 3. MAVEN CENTRAL
-        maven {
-            url = uri("https://repo1.maven.org/maven2/")
-            isAllowInsecureProtocol = true
-        }
+        google()
+        mavenCentral()
+        gradlePluginPortal()
     }
 }
 
@@ -40,18 +28,13 @@ include(":app")
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
-        // REPETIMOS A MESMA LÓGICA PARA AS DEPENDÊNCIAS
-        maven {
-            url = uri("https://maven.google.com")
-            isAllowInsecureProtocol = true
+        google()
+        mavenCentral()
+        maven { 
+            url = uri("https://storage.googleapis.com/download.flutter.io") 
         }
-        maven {
-            url = uri("https://repo1.maven.org/maven2/")
-            isAllowInsecureProtocol = true
-        }
-        maven {
-            url = uri("https://jitpack.io")
-            isAllowInsecureProtocol = true
+        maven { 
+            url = uri("https://jitpack.io") 
         }
     }
 }
