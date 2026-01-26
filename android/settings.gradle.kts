@@ -19,8 +19,8 @@ pluginManagement {
 
 plugins {
     id("dev.flutter.flutter-gradle-plugin") version "1.0.0" apply false
-    id("com.android.application") version "8.7.0" apply false // Subiu de 8.2.0 para 8.7.0
-    id("org.jetbrains.kotlin.android") version "2.0.20" apply false // Subiu de 1.9.24 para 2.0.20
+    id("com.android.application") version "8.2.0" apply false // Use 8.2.0 para ser mais compatível
+    id("org.jetbrains.kotlin.android") version "1.9.0" apply false // <--- O SEGREDO ESTÁ AQUI
 }
 
 include(":app")
