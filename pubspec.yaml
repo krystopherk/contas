@@ -1,0 +1,16 @@
+name: contas
+description: "Gerenciador Financeiro Offline"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  path_provider: ^2.1.2
+  intl: ^0.19.0
+
+flutter:
+  uses-material-design: true
